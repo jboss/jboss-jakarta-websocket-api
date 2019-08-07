@@ -26,11 +26,11 @@
         <version>2.0.0.CR1-SNAPSHOT</version>
     </parent>
     <groupId>org.jboss.spec.javax.websocket</groupId>
-    <artifactId>jakarta.websocket-server-api</artifactId>
+    <!-- server jar contains all websocket spec classes, will use same artifactId as https://github.com/jboss/jboss-websocket-api_spec -->
+    <artifactId>jboss-websocket-api_1.1_spec</artifactId> 
     <packaging>bundle</packaging>
     <name>Jakarta WebSocket - Server API</name>
     <description>Jakarta WebSocket - Server API</description>
-    <url>https://projects.eclipse.org/projects/ee4j.websocket</url>
 
     <build>
         <resources>
