@@ -2,3 +2,12 @@
 .classpath
 .project
 .settings
+
+#Ignore Intellij files
+*.iml
+*.iws
+*.ipr
+.idea/
+
+#Ignore Mac files
+.DS_Store
