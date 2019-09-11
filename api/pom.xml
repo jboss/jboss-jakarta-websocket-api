@@ -108,7 +108,7 @@
         <!--<spec_build>02</spec_build>-->
         <new_spec_version>1.1</new_spec_version>
         <spec_impl_version>1.1.2</spec_impl_version>
-        <packages.export>javax.websocket.*</packages.export>
+        <packages.export>javax.websocket.*;version=1.1</packages.export>
     </properties>
 
     <build>
@@ -116,11 +116,6 @@
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-compiler-plugin</artifactId>
-                <version>2.5.1</version>
-                <configuration>
-                    <source>1.6</source>
-                    <target>1.6</target>
-                </configuration>
             </plugin>
             <plugin>
                 <groupId>org.glassfish.copyright</groupId>
@@ -146,7 +141,6 @@
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-release-plugin</artifactId>
-                <version>2.3.2</version>
                 <configuration>
                     <mavenExecutorId>forked-path</mavenExecutorId>
                     <useReleaseProfile>false</useReleaseProfile>
@@ -156,7 +150,6 @@
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-source-plugin</artifactId>
-                <version>2.1.2</version>
                 <executions>
                     <execution>
                         <id>attach-sources</id>
@@ -170,7 +163,6 @@
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-javadoc-plugin</artifactId>
-                <version>2.8.1</version>
                 <configuration>
                     <docfilessubdirs>true</docfilessubdirs>
                     <groups>
@@ -179,9 +171,8 @@
                             <packages>javax.websocket*</packages>
                         </group>
                     </groups>
-                    <links>
-                        <link>http://docs.oracle.com/javase/6/docs/api/</link>
-                    </links>
+                    <source>1.8</source>
+                    <additionalJOption>-Xdoclint:none</additionalJOption>
                     <description>Jakarta WebSocket API documentation</description>
                     <doctitle>Jakarta WebSocket API documentation</doctitle>
                     <windowtitle>Jakarta WebSocket API documentation</windowtitle>
@@ -241,7 +232,6 @@
                 <plugin>
                     <groupId>org.apache.felix</groupId>
                     <artifactId>maven-bundle-plugin</artifactId>
-                    <version>1.4.3</version>
                     <extensions>true</extensions>
                     <configuration>
                         <instructions>
@@ -257,17 +247,14 @@
                 <plugin>
                     <groupId>org.apache.maven.plugins</groupId>
                     <artifactId>maven-jar-plugin</artifactId>
-                    <version>2.4</version>
                 </plugin>
                 <plugin>
                     <groupId>org.apache.maven.plugins</groupId>
                     <artifactId>maven-dependency-plugin</artifactId>
-                    <version>2.6</version>
                 </plugin>
                 <plugin>
                     <groupId>org.apache.maven.plugins</groupId>
                     <artifactId>maven-resources-plugin</artifactId>
-                    <version>2.6</version>
                 </plugin>
             </plugins>
         </pluginManagement>
